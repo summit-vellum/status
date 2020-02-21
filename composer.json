@@ -1,0 +1,26 @@
+{
+    "name": "quill/status",
+    "description": "Post Production workflow stages and custom workspace.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jess Castro",
+            "email": "jess.castro@summitmedia.com.ph"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Quill\\Status\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Quill\\Status\\StatusServiceProvider"
+            ]
+        }
+    }
+}
