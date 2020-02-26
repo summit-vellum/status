@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class StatusTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Inserts status.
      *
      * @return void
      */
