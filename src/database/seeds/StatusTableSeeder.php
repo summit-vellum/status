@@ -22,6 +22,22 @@ class StatusTableSeeder extends Seeder
     		4 => 'Deleted'
     	]);
 
+    	$defaultState = collect([
+    		0 => 'Inactive',
+    		1 => 'Active'
+    	]);
+
+		foreach($defaultState as $key => $status) {
+			DB::table('state')->insert([
+				'id' => $key,
+	            'name' => $status,
+	            'slug' => Str::slug($status),
+	            'description' => '',
+	            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+	            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+	        ]);
+		}
+
     	foreach($defaultStatus as $key => $status) {
 			DB::table('status')->insert([
 				'id' => $key,

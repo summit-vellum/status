@@ -21,6 +21,15 @@ class CreateStatusTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        Schema::create('state', function (Blueprint $table) {
+            $table->integer('id');
+            $table->string('name', 255)->nullable();
+            $table->string('slug', 255)->nullable();
+            $table->longText('description')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**
