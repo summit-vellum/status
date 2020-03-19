@@ -16,6 +16,10 @@ class StatusServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
         $this->publishes([
+            __DIR__ . '/config/status.php' => config_path('status.php'),
+        ], 'status.config');
+
+        $this->publishes([
         	__DIR__ . '/database/factories/StatusFactory.php' => database_path('factories/StatusFactory.php'),
             __DIR__ . '/database/seeds/StatusTableSeeder.php' => database_path('seeds/StatusTableSeeder.php'),
         ], 'status.migration');
